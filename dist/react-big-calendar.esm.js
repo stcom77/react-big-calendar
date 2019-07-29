@@ -2753,6 +2753,14 @@ function getSlotMetrics$1(_ref) {
         rangeEndMin - rangeStartMin < step
           ? ((rangeStartMin - step / 2) / (step * numSlots)) * 100
           : (rangeStartMin / (step * numSlots)) * 100
+      console.info(
+        rangeStartMin,
+        rangeEndMin,
+        step,
+        numSlots,
+        (rangeStartMin - step) / (step * numSlots),
+        (rangeStartMin - step / 2) / (step * numSlots)
+      )
       return {
         top: top,
         height: (rangeEndMin / (step * numSlots)) * 100 - top,
