@@ -12112,16 +12112,24 @@
         if (!ignoreMax) rangeEnd = min(end, max(start, rangeEnd));
         var rangeStartMin = positionFromDate(rangeStart);
         var rangeEndMin = positionFromDate(rangeEnd);
-        var top = rangeEndMin - rangeStartMin < step ? (rangeStartMin - 1) / (step * numSlots) * 100 : rangeStartMin / (step * numSlots) * 100;
-
-        if (rangeEndMin === rangeStartMin) {
-          var current = new Date();
-          var startDate = new Date(current.getFullYear(), current.getMonth() - 1, current.getDate());
-          var diff = current.getTime() - startDate.getTime();
-          diff = diff / (1000 * 60 * 60);
-          debugger;
-          console.info(diff, rangeStartMin, rangeEndMin, step, numSlots, rangeStartMin / (step * numSlots), (rangeStartMin - step) / (step * numSlots), (rangeStartMin - step / 2) / (step * numSlots), diff / (step * numSlots));
-        }
+        var top = rangeEndMin - rangeStartMin < step ? (rangeStartMin - 1) / (step * numSlots) * 100 : rangeStartMin / (step * numSlots) * 100; // if (rangeEndMin === rangeStartMin) {
+        //   const current = new Date()
+        //   const startDate = new Date(current.getFullYear(), current.getMonth() - 1, current.getDate())
+        //   let diff = current.getTime() - startDate.getTime()
+        //   diff = diff / (1000 * 60 * 60)
+        //   debugger
+        //   console.info(
+        //     diff,
+        //     rangeStartMin,
+        //     rangeEndMin,
+        //     step,
+        //     numSlots,
+        //     rangeStartMin / (step * numSlots),
+        //     (rangeStartMin - step) / (step * numSlots),
+        //     (rangeStartMin - (step / 2)) / (step * numSlots),
+        //     diff/(step * numSlots)
+        //   )
+        // }
 
         return {
           top: top,

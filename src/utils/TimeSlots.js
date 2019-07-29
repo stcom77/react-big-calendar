@@ -134,24 +134,24 @@ export function getSlotMetrics({ min: start, max: end, step, timeslots }) {
         rangeEndMin - rangeStartMin < step
           ? ((rangeStartMin - 1) / (step * numSlots)) * 100
           : (rangeStartMin / (step * numSlots)) * 100
-      if (rangeEndMin === rangeStartMin) {
-        const current = new Date()
-        const startDate = new Date(current.getFullYear(), current.getMonth() - 1, current.getDate())
-        let diff = current.getTime() - startDate.getTime()
-        diff = diff / (1000 * 60 * 60)
-        debugger
-        console.info(
-          diff,
-          rangeStartMin,
-          rangeEndMin,
-          step,
-          numSlots,
-          rangeStartMin / (step * numSlots),
-          (rangeStartMin - step) / (step * numSlots),
-          (rangeStartMin - (step / 2)) / (step * numSlots),
-          diff/(step * numSlots)
-        )
-      }
+      // if (rangeEndMin === rangeStartMin) {
+      //   const current = new Date()
+      //   const startDate = new Date(current.getFullYear(), current.getMonth() - 1, current.getDate())
+      //   let diff = current.getTime() - startDate.getTime()
+      //   diff = diff / (1000 * 60 * 60)
+      //   debugger
+      //   console.info(
+      //     diff,
+      //     rangeStartMin,
+      //     rangeEndMin,
+      //     step,
+      //     numSlots,
+      //     rangeStartMin / (step * numSlots),
+      //     (rangeStartMin - step) / (step * numSlots),
+      //     (rangeStartMin - (step / 2)) / (step * numSlots),
+      //     diff/(step * numSlots)
+      //   )
+      // }
       return {
         top,
         height: (rangeEndMin / (step * numSlots)) * 100 - top,
