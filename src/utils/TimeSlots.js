@@ -139,6 +139,7 @@ export function getSlotMetrics({ min: start, max: end, step, timeslots }) {
         const startDate = new Date(current.getFullYear(), current.getMonth() - 1, current.getDate())
         let diff = current.getTime() - startDate.getTime()
         diff = diff / (1000 * 60 * 60)
+        debugger
         console.info(
           diff,
           rangeStartMin,
@@ -147,7 +148,7 @@ export function getSlotMetrics({ min: start, max: end, step, timeslots }) {
           numSlots,
           rangeStartMin / (step * numSlots),
           (rangeStartMin - step) / (step * numSlots),
-          (rangeStartMin - step / 2) / (step * numSlots),
+          (rangeStartMin - (step / 2)) / (step * numSlots),
           diff/(step * numSlots)
         )
       }

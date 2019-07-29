@@ -2296,6 +2296,7 @@ function getSlotMetrics$1(_ref) {
         var startDate = new Date(current.getFullYear(), current.getMonth() - 1, current.getDate());
         var diff = current.getTime() - startDate.getTime();
         diff = diff / (1000 * 60 * 60);
+        debugger;
         console.info(diff, rangeStartMin, rangeEndMin, step, numSlots, rangeStartMin / (step * numSlots), (rangeStartMin - step) / (step * numSlots), (rangeStartMin - step / 2) / (step * numSlots), diff / (step * numSlots));
       }
 
