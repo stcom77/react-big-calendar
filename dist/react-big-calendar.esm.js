@@ -2751,7 +2751,7 @@ function getSlotMetrics$1(_ref) {
       var rangeEndMin = positionFromDate(rangeEnd)
       var top =
         rangeEndMin - rangeStartMin < step
-          ? ((rangeStartMin - step) / (step * numSlots)) * 100
+          ? ((rangeStartMin - step / 2) / (step * numSlots)) * 100
           : (rangeStartMin / (step * numSlots)) * 100
       return {
         top: top,
