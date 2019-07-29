@@ -12112,7 +12112,7 @@
         if (!ignoreMax) rangeEnd = min(end, max(start, rangeEnd));
         var rangeStartMin = positionFromDate(rangeStart);
         var rangeEndMin = positionFromDate(rangeEnd);
-        var top = rangeEndMin - rangeStartMin < step ? (rangeStartMin - step / 2) / (step * numSlots) * 100 : rangeStartMin / (step * numSlots) * 100;
+        var top = rangeEndMin - rangeStartMin < step ? (rangeStartMin - 1) / (step * numSlots) * 100 : rangeStartMin / (step * numSlots) * 100;
 
         if (rangeEndMin === rangeStartMin) {
           var current = new Date();
