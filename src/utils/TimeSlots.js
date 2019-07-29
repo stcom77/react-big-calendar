@@ -135,7 +135,12 @@ export function getSlotMetrics({ min: start, max: end, step, timeslots }) {
           ? ((rangeStartMin - step / 2) / (step * numSlots)) * 100
           : (rangeStartMin / (step * numSlots)) * 100
       if (rangeEndMin === rangeStartMin) {
+        const current = new Date()
+        const startDate = new Date(current.getFullYear(), current.getMonth() - 1, current.getDate())
+        let diff = current.getTime() - startDate.getTime()
+        diff = diff / (1000 * 60 * 60)
         console.info(
+          diff,
           rangeStartMin,
           rangeEndMin,
           step,
