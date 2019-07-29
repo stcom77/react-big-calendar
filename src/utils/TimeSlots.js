@@ -147,7 +147,8 @@ export function getSlotMetrics({ min: start, max: end, step, timeslots }) {
           numSlots,
           rangeStartMin / (step * numSlots),
           (rangeStartMin - step) / (step * numSlots),
-          (rangeStartMin - step / 2) / (step * numSlots)
+          (rangeStartMin - step / 2) / (step * numSlots),
+          diff/(step * numSlots)
         )
       }
       return {
